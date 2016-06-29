@@ -4,10 +4,9 @@ import java.io.PrintWriter;
 
 import javax.servlet.http.HttpServletResponse;
 
-import org.json.JSONObject;
-
-import com.zhan.app.spider.exception.AppException;
-import com.zhan.app.spider.exception.ERROR;
+import com.alibaba.fastjson.JSONObject;
+import com.zhan.app.exception.AppException;
+import com.zhan.app.exception.ERROR;
 
 public class WriteJsonUtil {
 	public static void write(HttpServletResponse response, Exception ex) {

@@ -7,6 +7,9 @@
 <title></title>
 </head>
 <body>
-	 
+	<form action="pub/do">
+		<input type="text" name="content" /> <input type="submit"
+			value="push" />
+	</form>
 </body>
 </html>

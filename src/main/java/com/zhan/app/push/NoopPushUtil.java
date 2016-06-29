@@ -7,8 +7,7 @@ import java.util.Map;
 import com.notnoop.apns.APNS;
 import com.notnoop.apns.ApnsService;
 import com.notnoop.apns.PayloadBuilder;
-import com.zhan.app.common.News;
-import com.zhan.app.spider.util.TextUtils;
+import com.zhan.app.util.TextUtils;
 
 public class NoopPushUtil {
 
@@ -37,17 +36,17 @@ public class NoopPushUtil {
 				.withAppleDestination(isProduction).build();
 	}
 
-	public boolean pushNews(News news) {
+	public boolean pushNews(PushMsg msg) {
 
-		if (news == null) {
+		if (msg == null) {
 			return false;
 		}
-		if (TextUtils.isEmpty(news.title)) {
+		if (TextUtils.isEmpty(msg.title)) {
 			return false;
 		}
 
-		String title = news.title;
-		String id = news.id;
+		String title = msg.title;
+		String id = msg.id;
 		Map<String, String> jsonObject = new HashMap<String, String>();
 		jsonObject.put("appId", "");
 		jsonObject.put("type", "0");

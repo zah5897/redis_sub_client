@@ -2,7 +2,7 @@ package com.zhan.app.util;
 
 import org.springframework.ui.ModelMap;
 
-import com.zhan.app.spider.exception.ERROR;
+import com.zhan.app.exception.ERROR;
 
 public class ResultUtil {
 	public static ModelMap getResultMap(ERROR error, String msg) {
